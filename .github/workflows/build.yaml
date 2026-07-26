@@ -1,0 +1,79 @@
+# Fast static deploy for GitHub Pages
+# Settings > Pages > Source must be: GitHub Actions (not "Deploy from a branch")
+
+name: Build & Deploy Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  actions: write
+
+# Cancel stuck/in-progress deploys (helps when CDN purge hangs)
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (shallow)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Clear Actions caches
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          ids="$(gh cache list --limit 100 --json id --jq '.[].id' 2>/dev/null)"
+          if [ -n "$ids" ]; then
+            echo "$ids" | while read -r id; do
+              [ -n "$id" ] && gh cache delete "$id"
+            done
+            echo "Cleared Actions caches."
+          else
+            echo "No Actions caches to clear."
+          fi
+
+      - name: Stage site (skip Jekyll / no build step)
+        run: |
+          mkdir -p _site
+          # Copy only what the site needs — smaller artifact = faster upload/deploy
+          rsync -a \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='_site/' \
+            --exclude='.gitignore' \
+            --exclude='README.md' \
+            ./ _site/
+          # Force skip Jekyll processing (faster publish)
+          touch _site/.nojekyll
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          # CDN purge can be slow; avoid aborting mid-purge like before
+          timeout: "900000"
+          reporting_interval: "3000"
