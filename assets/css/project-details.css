@@ -1,0 +1,75 @@
+﻿/* =============================================================
+   صحتنا | Sehetna — project-details.html
+   ============================================================= */
+/* -------------------------------------------------------------
+   15. Case study (project details)
+   ------------------------------------------------------------- */
+.case-block {
+  margin-bottom: 2.5rem;
+}
+
+.case-block h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.case-block h2 i {
+  color: var(--secondary);
+}
+
+.case-block p {
+  color: var(--text-muted);
+}
+
+.case-hero-media {
+  height: 320px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 4rem;
+  margin-bottom: 2.5rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.info-panel {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.8rem;
+  position: sticky;
+  top: calc(var(--header-h) + 1rem);
+}
+
+.info-panel h3 {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.info-panel dl {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.info-panel dt {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.info-panel dd {
+  font-weight: 700;
+}
+
+/* Responsive — project details */
+@media (max-width: 992px) {
+  .info-panel {
+    position: static;
+  }
+}

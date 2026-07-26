@@ -1,0 +1,84 @@
+﻿/* =============================================================
+   صحتنا | Sehetna — projects.html (also used on index)
+   ============================================================= */
+/* -------------------------------------------------------------
+   9. Projects
+   ------------------------------------------------------------- */
+.project {
+  padding: 0;
+}
+
+.project::before {
+  display: none;
+}
+
+.project__media {
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.2rem;
+  color: #fff;
+}
+
+.project__media--1 {
+  background: linear-gradient(135deg, #0f766e, #14b8a6);
+}
+.project__media--2 {
+  background: linear-gradient(135deg, #0b544e, #0f766e);
+}
+.project__media--3 {
+  background: linear-gradient(135deg, #14b8a6, #5eead4);
+}
+.project__media--4 {
+  background: linear-gradient(135deg, #115e59, #2dd4bf);
+}
+
+.project__media i {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+  font-size: 2.3rem;
+  opacity: 0.92;
+}
+
+.project__badge {
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.3rem 0.85rem;
+  border-radius: var(--radius-pill);
+}
+
+.project__body {
+  padding: 1.6rem;
+}
+
+.project__body h3 {
+  font-size: 1.22rem;
+  margin-bottom: 0.5rem;
+}
+
+.project__body p {
+  color: var(--text-muted);
+  font-size: 0.94rem;
+  margin-bottom: 1rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.tag {
+  font-family: var(--font-en);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--primary-tint);
+  padding: 0.28rem 0.7rem;
+  border-radius: var(--radius-pill);
+}

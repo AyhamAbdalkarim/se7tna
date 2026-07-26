@@ -1,0 +1,136 @@
+﻿/* =============================================================
+   صحتنا | Sehetna — team.html
+   ============================================================= */
+/* -------------------------------------------------------------
+   12. Team (health specialties)
+   ------------------------------------------------------------- */
+.member {
+  text-align: center;
+  padding: 2.2rem 1.5rem;
+}
+
+.member__photo {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.3rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  box-shadow: 0 8px 20px rgba(15, 118, 110, 0.28);
+}
+
+.member__badge {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 0.24rem 0.85rem;
+  border-radius: var(--radius-pill);
+  background: var(--primary-tint);
+  color: var(--primary);
+  margin-bottom: 0.7rem;
+}
+
+.member__name {
+  font-size: 1.15rem;
+  margin-bottom: 0.15rem;
+}
+
+.member__role {
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.socials a {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--primary-tint);
+  color: var(--primary);
+  transition: all var(--transition);
+}
+
+.socials a:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Specialty colour variants */
+.member--doctor .member__photo {
+  background: linear-gradient(135deg, var(--c-doctor), #2dd4bf);
+}
+.member--doctor .member__badge {
+  background: #e6f5f2;
+  color: var(--c-doctor);
+}
+
+.member--pharma .member__photo {
+  background: linear-gradient(135deg, var(--c-pharma), #4ade80);
+}
+.member--pharma .member__badge {
+  background: #e7f7ec;
+  color: var(--c-pharma);
+}
+
+.member--nurse .member__photo {
+  background: linear-gradient(135deg, var(--c-nurse), #f472b6);
+}
+.member--nurse .member__badge {
+  background: #fce7f1;
+  color: var(--c-nurse);
+}
+
+.member--nutrition .member__photo {
+  background: linear-gradient(135deg, var(--c-nutrition), #fbbf24);
+}
+.member--nutrition .member__badge {
+  background: #fdf1e0;
+  color: var(--c-nutrition);
+}
+
+.member--physio .member__photo {
+  background: linear-gradient(135deg, var(--c-physio), #60a5fa);
+}
+.member--physio .member__badge {
+  background: #e6effe;
+  color: var(--c-physio);
+}
+
+.member--lab .member__photo {
+  background: linear-gradient(135deg, var(--c-lab), #a78bfa);
+}
+.member--lab .member__badge {
+  background: #f0e9fe;
+  color: var(--c-lab);
+}
+
+.member--dentist .member__photo {
+  background: linear-gradient(135deg, var(--c-dentist), #22d3ee);
+}
+.member--dentist .member__badge {
+  background: #e2f5f9;
+  color: var(--c-dentist);
+}
+
+.member--coord .member__photo {
+  background: linear-gradient(135deg, var(--c-coord), #94a3b8);
+}
+.member--coord .member__badge {
+  background: #eef1f5;
+  color: var(--c-coord);
+}

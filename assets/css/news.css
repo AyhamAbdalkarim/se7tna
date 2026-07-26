@@ -1,0 +1,124 @@
+﻿/* =============================================================
+   صحتنا | Sehetna — news.html (also used on index)
+   ============================================================= */
+/* -------------------------------------------------------------
+   10. News / posts
+   ------------------------------------------------------------- */
+.post {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.post::before {
+  display: none;
+}
+
+.post__media {
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 2.6rem;
+  position: relative;
+}
+
+.post__media--1 {
+  background: linear-gradient(135deg, #0f766e, #14b8a6);
+}
+.post__media--2 {
+  background: linear-gradient(135deg, #0891b2, #22d3ee);
+}
+.post__media--3 {
+  background: linear-gradient(135deg, #7c3aed, #a78bfa);
+}
+.post__media--4 {
+  background: linear-gradient(135deg, #16a34a, #4ade80);
+}
+.post__media--5 {
+  background: linear-gradient(135deg, #d97706, #fbbf24);
+}
+.post__media--6 {
+  background: linear-gradient(135deg, #db2777, #f472b6);
+}
+
+.post__cat {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--primary);
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-pill);
+}
+
+.post__body {
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.post__meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 0.7rem;
+}
+
+.post__meta i {
+  color: var(--secondary);
+  margin-inline-end: 0.3rem;
+}
+
+.post__title {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.post__excerpt {
+  color: var(--text-muted);
+  font-size: 0.94rem;
+  margin-bottom: 1.1rem;
+  flex: 1;
+}
+
+/* Featured news (first, wide) */
+.post--featured {
+  grid-column: 1 / -1;
+  flex-direction: row;
+}
+
+.post--featured .post__media {
+  flex: 0 0 46%;
+  height: auto;
+  min-height: 300px;
+  font-size: 4rem;
+}
+
+.post--featured .post__body {
+  padding: 2.4rem;
+  justify-content: center;
+}
+
+.post--featured .post__title {
+  font-size: 1.6rem;
+}
+
+/* Responsive — news */
+@media (max-width: 992px) {
+  .post--featured {
+    flex-direction: column;
+  }
+
+  .post--featured .post__media {
+    flex: none;
+    min-height: 220px;
+    height: 220px;
+  }
+}
