@@ -50,7 +50,7 @@
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
   /* Layout */
-  --header-h: 78px;
+  --header-h: 88px;
   --container: 1200px;
 
   /* Fonts */
@@ -295,32 +295,14 @@ textarea:focus-visible {
 .nav__brand {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
-  font-weight: 800;
+  flex-shrink: 0;
 }
 
 .nav__brand img {
-  height: 48px;
+  height: 68px;
   width: auto;
-}
-
-.nav__brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-}
-
-.nav__brand-text b {
-  font-size: 1.2rem;
-  color: var(--primary);
-}
-
-.nav__brand-text span {
-  font-family: var(--font-en);
-  font-size: 0.68rem;
-  letter-spacing: 0.24em;
-  color: var(--text-muted);
-  text-transform: uppercase;
+  display: block;
+  object-fit: contain;
 }
 
 .nav__menu {
@@ -611,20 +593,17 @@ textarea:focus-visible {
 .footer__brand {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .footer__brand img {
-  height: 50px;
-  background: #fff;
-  padding: 4px;
-  border-radius: 10px;
-}
-
-.footer__brand b {
-  color: #fff;
-  font-size: 1.2rem;
+  height: 72px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 0.5rem 0.75rem;
+  border-radius: 14px;
 }
 
 .footer__col h4 {

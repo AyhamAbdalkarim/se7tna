@@ -29,14 +29,11 @@
 }
 
 .hero__logo {
-  width: 92px;
-  height: 92px;
+  height: clamp(120px, 22vw, 168px);
+  width: auto;
+  display: block;
   object-fit: contain;
-  padding: 12px;
-  background: #fff;
-  border-radius: 26px;
-  box-shadow: var(--shadow);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.6rem;
 }
 
 .hero__badge {

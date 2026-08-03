@@ -52,8 +52,11 @@
 }
 
 .hero__card img {
-  width: min(220px, 68%);
-  margin: 0 auto 1rem;
+  height: clamp(140px, 28vw, 200px);
+  width: auto;
+  display: block;
+  margin: 0 auto 1.2rem;
+  object-fit: contain;
 }
 
 .hero__card h3 {
