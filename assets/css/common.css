@@ -644,10 +644,29 @@ textarea:focus-visible {
   color: var(--accent);
 }
 
+.footer__assoc {
+  margin-top: 0.85rem;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer__assoc a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.footer__assoc a:hover {
+  text-decoration: underline;
+}
+
 .footer__socials {
   display: flex;
   gap: 0.6rem;
   margin-top: 1rem;
+}
+
+.footer__socials--assoc {
+  margin-top: 0.6rem;
 }
 
 .footer__socials a {
