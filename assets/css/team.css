@@ -14,6 +14,7 @@
   height: 96px;
   margin: 0 auto 1rem;
   border-radius: 50%;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,7 +46,12 @@
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
-
+.member__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
 .socials {
   display: flex;
   justify-content: center;

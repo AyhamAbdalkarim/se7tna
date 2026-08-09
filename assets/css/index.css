@@ -84,8 +84,9 @@
   background: rgba(255, 255, 255, 0.75);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1rem 1.6rem;
-  min-width: 150px;
+  padding: 1rem 1.25rem;
+  min-width: 170px;
+  max-width: 220px;
   box-shadow: var(--shadow-sm);
 }
 
@@ -97,8 +98,9 @@
 }
 
 .hero__mini-stats .lbl {
-  font-size: 0.88rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
+  line-height: 1.35;
 }
 
 /* Decorative floating blobs */
@@ -166,6 +168,9 @@
 .stat__label {
   color: rgba(255, 255, 255, 0.85);
   font-size: 0.95rem;
+  line-height: 1.4;
+  max-width: 12rem;
+  margin-inline: auto;
 }
 
 

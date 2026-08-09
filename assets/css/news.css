@@ -42,6 +42,15 @@
 .post__media--6 {
   background: linear-gradient(135deg, #db2777, #f472b6);
 }
+.post__media--7 {
+  background: linear-gradient(135deg, #0369a1, #38bdf8);
+}
+.post__media--8 {
+  background: linear-gradient(135deg, #4338ca, #818cf8);
+}
+.post__media--9 {
+  background: linear-gradient(135deg, #0d9488, #5eead4);
+}
 
 .post__cat {
   position: absolute;
