@@ -92,7 +92,9 @@
         target === current ||
         (current === "" && target === "index.html") ||
         // Treat project-details as part of the Projects section
-        (current === "project-details.html" && target === "projects.html");
+        ((current === "project-details.html" ||
+          current === "project-blood.html") &&
+          target === "projects.html");
       link.classList.toggle("active", isMatch);
       if (isMatch) link.setAttribute("aria-current", "page");
     });
