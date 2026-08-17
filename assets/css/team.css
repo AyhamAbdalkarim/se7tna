@@ -140,3 +140,11 @@
   background: #eef1f5;
   color: var(--c-coord);
 }
+
+.member--it .member__photo {
+  background: linear-gradient(135deg, var(--c-it), #818cf8);
+}
+.member--it .member__badge {
+  background: #eef2ff;
+  color: var(--c-it);
+}
